@@ -253,11 +253,6 @@ function startSlideshow(){
   index=0;
   let img=document.getElementById("slideImg");
 
-  function startSlideshow(){
-  showPage("p8");
-  index=0;
-  let img=document.getElementById("slideImg");
-
   let interval=setInterval(()=>{
     img.src=images[index];
     img.className="fade";
@@ -266,18 +261,14 @@ function startSlideshow(){
     if(index===images.length){
       clearInterval(interval);
       crackers();
-
       setTimeout(()=>{
-        let love=document.createElement("h1");
-        love.innerText="I Love You ❤️ Love You Forever 💖";
-        love.style.color="#ff4d6d";
-        love.style.fontSize="50px";
-        love.style.marginTop="20px";
-        document.getElementById("p8").appendChild(love);
+        document.getElementById("p8").innerHTML +=
+          "<h1 style='color:#ff4d6d'>I Love You ❤️<br>Love You Forever</h1>";
       },2000);
     }
   },3000);
 }
+
 function crackers(){
   for(let i=0;i<15;i++){
     setTimeout(()=>{
@@ -293,6 +284,3 @@ function crackers(){
 
 </body>
 </html>
-
-
-
